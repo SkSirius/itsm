@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-class AuthLayout extends Component {
-  render() {
-    return (
-      <div className="App">
+const AppLayout = ({ children }) => (
+    <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Login page</h1>
+            <h1 className="App-title">Login Layout</h1>
         </header>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+        {children}
+    </div>
+);
 
-export default AuthLayout;
+AppLayout.propTypes = {
+    children: PropTypes.element.isRequired
+};
+
+export default AppLayout;

@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
-import { createDevTools } from 'redux-devtools';
-import LogMonitor from 'redux-devtools-log-monitor';
-import DockMonitor from 'redux-devtools-dock-monitor';
+import React from "react";
+import { createDevTools } from "redux-devtools";
+import LogMonitor from "redux-devtools-log-monitor";
+import DockMonitor from "redux-devtools-dock-monitor";
 
-class EmptyComponent extends Component {
-    render() {
-      return (
-        <div className="empty"></div>
-      );
-    }
-}
+const EmptyComponent = () => (<div className="empty" />);
 
-let DevTools = createDevTools(<EmptyComponent></EmptyComponent>);
+let DevTools = <EmptyComponent />;
 
-if (process.env.NODE_ENV === 'development') {
-    DevTools = createDevTools(
-        <DockMonitor toggleVisibilityKey="ctrl-h"
-                    changePositionKey="ctrl-w"
-                    defaultIsVisible={false}>
+if (process.env.NODE_ENV === "development") {
+    DevTools = (
+        <DockMonitor
+            toggleVisibilityKey="ctrl-h"
+            changePositionKey="ctrl-w"
+            defaultIsVisible={false}
+        >
             <LogMonitor />
         </DockMonitor>
     );
 }
 
-export default DevTools;
-
+const tools = createDevTools(DevTools);
+export default tools;

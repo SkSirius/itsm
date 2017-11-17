@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-class AppLayout extends Component {
-  render() {
-    return (
-      <div className="App">
+const AppLayout = ({ children }) => (
+    <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+            <h1 className="App-title">Welcome to React</h1>
         </header>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+        {children}
+    </div>
+);
+
+AppLayout.propTypes = {
+    children: PropTypes.element.isRequired
+};
 
 export default AppLayout;
