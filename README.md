@@ -41,43 +41,67 @@ Please read following code guide for understaing basic react code guide concepts
 <https://github.com/airbnb/javascript/blob/master/react/README.md>
 
 ### Docker
-TBD 
+To run docker container for development:
 
-### Information For Developer (Highly Recommended):
+```sh
+$ docker-compose up
+```
 
-Please read following resource before proceding to development for better understanding of core React concepts:
+Rebuild:
+
+```sh
+$ docker-compose up --build
+```
+
+Codebase is mounted as volume and supports autoreload on codechanges.
+
+### Information For Developers (Highly Recommended):
+
+Please read following resource before proceeding to development for better understanding of core React concepts:
 
 React philosophy:
+
 <https://reactjs.org/docs/thinking-in-react.html>
 
-Container vc Presentation components concept, written by React author:
+Container vs Presentation components concept, written by React author:
+
 <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0>
 
 Basics of redux integration into react application:
+
 <https://redux.js.org/docs/basics/UsageWithReact.html>
 
 Javascript fetch library will be used to perform requests to api:
-https://davidwalsh.name/fetch
+
+<https://davidwalsh.name/fetch>
 
 Prop-Types plugin often used to define restrictions on React component props:
-https://reactjs.org/docs/typechecking-with-proptypes.html
+
+<https://reactjs.org/docs/typechecking-with-proptypes.html>
 
 ##### Code improvements:
 
 Basics on reducers and core concepts on implementation:
-https://redux.js.org/docs/basics/Reducers.html
+
+
+<https://redux.js.org/docs/basics/Reducers.html>
+
+
 NOTE: Reducer dooes not mutate state
 Use Object.assign({}, state, {}); or object spread operator
 Don't forget to return default state for any unknown action
-https://redux.js.org/docs/recipes/UsingObjectSpreadOperator.html
+
+
+<https://redux.js.org/docs/recipes/UsingObjectSpreadOperator.html>
 
 Destructuring assignments:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment>
 
 ### Todos
  - JWT Authentication
  - Generic request library
- - Docker
 
 [//]: #
    [create-react-app]: <https://github.com/facebookincubator/create-react-app>

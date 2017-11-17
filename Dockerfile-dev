@@ -1,0 +1,15 @@
+FROM node:latest
+
+# set working directory
+RUN mkdir -p /app
+WORKDIR /app
+
+# install app dependencies
+ADD package.json /app/package.json
+RUN npm install
+
+# add app
+ADD . /app
+
+# run app
+CMD ["npm", "start"]
